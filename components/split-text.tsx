@@ -1,9 +1,10 @@
 "use client";
+import * as React from "react";
 
 import { useEffect, useRef } from "react";
 import { useReducedMotion } from "motion/react";
 
-export function SplitText({ className = "" }: { className?: string }) {
+export function SplitText({ className = "", children}: { className?: string; children: React.ReactNode}) {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const revealed = useRef(false);
